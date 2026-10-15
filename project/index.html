@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Resizer — Free Online Photo Resizer for JPG, PNG, WebP &amp; GIF</title>
+<meta name="description" content="Resize images online for free. Adjust width, height, and quality with a live preview. Supports JPG, PNG, WebP, and GIF. No upload, no signup — 100% browser-based.">
+<meta name="keywords" content="image resizer, resize image online, photo resizer, resize JPG, resize PNG, resize WebP, change image dimensions, online image tool">
+<meta property="og:title" content="Free Online Image Resizer">
+<meta property="og:description" content="Resize JPG, PNG, WebP, and GIF images instantly in your browser. No upload needed.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://imageresizequick.com/index.html">
+<link rel="stylesheet" href="css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.5-3.5L7 21"/></svg>
+      ImageResizer
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Top Ad Slot -->
+<div class="container">
+  <div class="ad-slot ad-top">
+    <!-- Google AdSense — Top Banner -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    Advertisement
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Free Online Image Resizer</h1>
+    <p>Resize your JPG, PNG, WebP, and GIF images in seconds — right in your browser. No upload, no signup, no watermark.</p>
+  </div>
+</section>
+
+<!-- Resizer Tool -->
+<section class="tool-section">
+  <div class="container">
+    <div class="tool-card">
+      <div class="tool-grid">
+
+        <!-- Left: Upload & Controls -->
+        <div class="panel">
+          <h2>1. Upload &amp; Settings</h2>
+
+          <div class="drop-zone" id="dropZone">
+            <svg class="dz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <div class="dz-text">Click or drag an image here</div>
+            <div class="dz-sub">JPG, PNG, WebP, GIF — up to your device limit</div>
+            <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp,image/gif">
+          </div>
+          <div class="file-info" id="fileInfo"></div>
+
+          <div style="margin-top:24px">
+
+            <div class="control-group">
+              <label for="widthInput">Width (px)</label>
+              <div class="dimension-row">
+                <input type="number" id="widthInput" min="1" max="10000" placeholder="Width">
+                <input type="number" id="heightInput" min="1" max="10000" placeholder="Height" style="margin-top:0">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="lock-ratio">
+                <input type="checkbox" id="lockRatio" checked>
+                Lock aspect ratio
+              </label>
+            </div>
+
+            <div class="control-group">
+              <label for="formatSelect">Output Format</label>
+              <select id="formatSelect">
+                <option value="image/jpeg">JPG</option>
+                <option value="image/png">PNG</option>
+                <option value="image/webp">WebP</option>
+              </select>
+            </div>
+
+            <div class="control-group" id="qualityRow">
+              <label for="qualitySlider">JPG Quality</label>
+              <div class="slider-wrap">
+                <input type="range" id="qualitySlider" min="10" max="100" value="85">
+                <span class="slider-value" id="qualityValue">85%</span>
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button class="btn btn-accent btn-block" id="downloadBtn" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Resized Image
+              </button>
+              <button class="btn btn-primary" id="resetBtn" style="background:var(--gray-200);color:var(--gray-700)">Reset</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Preview -->
+        <div class="panel">
+          <h2>2. Live Preview</h2>
+          <div class="preview-area">
+            <div class="placeholder" id="previewPlaceholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.5-3.5L7 21"/></svg>
+              Your preview will appear here
+            </div>
+            <canvas id="previewCanvas" style="display:none"></canvas>
+          </div>
+          <div class="preview-meta" id="previewMeta"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Middle Ad Slot -->
+<div class="container">
+  <div class="ad-slot ad-middle">
+    <!-- Google AdSense — Middle -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    Advertisement
+  </div>
+</div>
+
+<!-- How It Works -->
+<section class="section" style="background:#fff">
+  <div class="container">
+    <h2>How to Resize an Image</h2>
+    <p class="section-intro">Three simple steps — no software to install, no account to create.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Upload Your Image</h3>
+        <p>Drag and drop or click to choose a JPG, PNG, WebP, or GIF file from your device.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Set Dimensions</h3>
+        <p>Enter your target width and height. Lock the aspect ratio to keep proportions.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Download</h3>
+        <p>Preview the result instantly, then download the resized image in your chosen format.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section">
+  <div class="container">
+    <h2>Why Use Our Image Resizer?</h2>
+    <p class="section-intro">A fast, private, and completely free tool for everyday image resizing needs.</p>
+    <div class="features">
+      <div class="feature-card">
+        <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>100% Private</h3>
+        <p>Your images never leave your device. All processing happens locally in your browser.</p>
+      </div>
+      <div class="feature-card">
+        <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <h3>Lightning Fast</h3>
+        <p>See your resized image instantly with real-time preview — no waiting for uploads.</p>
+      </div>
+      <div class="feature-card">
+        <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        <h3>Multiple Formats</h3>
+        <p>Support for JPG, PNG, WebP, and GIF with adjustable quality for JPG output.</p>
+      </div>
+      <div class="feature-card">
+        <svg class="fc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <h3>No Signup</h3>
+        <p>Use the tool right away — no registration, no email, no hidden fees, no watermark.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Ad Slot -->
+<div class="container">
+  <div class="ad-slot ad-bottom">
+    <!-- Google AdSense — Bottom -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    Advertisement
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ImageResizer</h4>
+        <p>A free, browser-based tool for resizing images. Your photos stay on your device — nothing is uploaded to any server.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 ImageResizer. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="js/resizer.js"></script>
+</body>
+</html>
